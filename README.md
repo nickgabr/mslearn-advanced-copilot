@@ -1,7 +1,7 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/MicrosoftDocs/mslearn-advanced-copilot)
 
 # Apply advanced GitHub Copilot techniques
-Discover new ways to leverage advanced GitHub Copilot techniques within a Python repository to implement an interactive HTML form and an Application Programming Interface (API) endpoint. 
+Discover new ways to leverage advanced GitHub Copilot techniques within a Python repository to implement an interactive HTML form and an Application Programming Interface (API) endpoint.
 Gain more practical experience by using this repository that contains a Python Web Application that hosts a Travel Weather API.
 
 
@@ -13,10 +13,10 @@ Gain more practical experience by using this repository that contains a Python W
 ## 💪🏽 Exercise
 The current API is not exposing country/{country} which needs to be implemented to list cities. The route should allow only GET HTTP requests with a JSON response providing information from the historical high and low for that country, city, and given month.
 
-As with any implementation, this addition should include at least one test function to work with the pytest runner and test framework. 
+As with any implementation, this addition should include at least one test function to work with the pytest runner and test framework.
 
-### 🛠 Step 1: Add a new route 
-On our first exercise we will create a new route in our API. Go to the main.py file, and by using the inline chat with the following command `ctrl` + `i` (on Windows) or  `cmd` + `i`(on Mac) ask GitHub Copilot to help you create a new API that shows you the cities of a country. 
+### 🛠 Step 1: Add a new route
+On our first exercise we will create a new route in our API. Go to the main.py file, and by using the inline chat with the following command `ctrl` + `i` (on Windows) or  `cmd` + `i`(on Mac) ask GitHub Copilot to help you create a new API that shows you the cities of a country.
 
 `> Create a new route that exposes the cities of a country.`
 
@@ -58,7 +58,39 @@ Finally, verify the new endpoint is working by trying it out by going to the `/d
 
 🚀 Congratulations, through the exercise, you haven't only used copilot to generate code but also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
 
+### 🚀 How to Run the Project
 
+1. **Install dependencies**
+   Make sure you have Python 3.11+ installed. Then, install the required packages:
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+2. **Start the FastAPI server**
+   Run the server using Uvicorn:
+
+   ```sh
+   uvicorn main:app --reload
+   ```
+
+   To use a different port, add `--port <PORT_NUMBER>` (e.g., `--port 8080`).
+
+3. **Access the API documentation**
+   Open your browser and go to [http://localhost:8000/docs](http://localhost:8000/docs) to view and interact with the API.
+
+4. **Run tests**
+   To verify the endpoints, run the tests using pytest:
+
+   ```sh
+   pytest
+   ```
+
+5. **OpenAPI schema**
+   The OpenAPI schema is available at `.well-known/openapi.json`.
+
+---
+For more details, see `main.py`
 
 # Legal Notices
 
